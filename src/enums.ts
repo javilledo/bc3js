@@ -1,28 +1,28 @@
 
-export enum VERSION_FORMATO {
-    'FIE-1.01' = 'FIE-1.01',
-    'FIEBDC-3/95' = 'FIEBDC-3/95',
-    'FIEBDC-3/98' = 'FIEBDC-3/98',
-    'FIEBDC-3/2002' = 'FIEBDC-3/2002',
-    'FIEBDC-3/2004' = 'FIEBDC-3/2004',
-    'FIEBDC-3/2007' = 'FIEBDC-3/2007',
-    'FIEBDC-3/2012' = 'FIEBDC-3/2012',
-    'FIEBDC-3/2016' = 'FIEBDC-3/2016',
-    'FIEBDC-3/2020' = 'FIEBDC-3/2020'
+export enum FormatVersion {
+    v101 = 'FIE-1.01',
+    v1995 = 'FIEBDC-3/95',
+    v1998 = 'FIEBDC-3/98',
+    v2002 = 'FIEBDC-3/2002',
+    v2004 = 'FIEBDC-3/2004',
+    v2007 = 'FIEBDC-3/2007',
+    v2012 = 'FIEBDC-3/2012',
+    v2016 = 'FIEBDC-3/2016',
+    v2020 = 'FIEBDC-3/2020'
 }
 
-export enum JUEGO_CARACTERES {
-    'ANSI' 
+export enum Charset {
+    'ANSI'
 } // No se contemplan 850 ni 437 (D.O.S)
 
-export enum TIPO_INFORMACION {
+export enum InformationType {
     'Base de datos' = 1,
     'Presupuesto' = 2,
     'Certificación (a origen)' = 3,
     'Actualización de base de datos' = 4
 }
 
-export enum DIVISA {
+export enum Currency {
     'ATS', //Chelin Austriaco 
     'BEF', //Franco Belga 
     'DEM', // Marco Alemán 
@@ -66,7 +66,7 @@ export enum DIVISA {
     'ZAR', //Rand Sudafricano 
 }
 
-export enum UNIDAD_DE_MEDIDA {
+export enum UnitOfMeassure {
     'm',   //Metro
     'm2',  //Metro cuadrado
     'm3',  //Metro cúbico
@@ -87,7 +87,7 @@ export enum UNIDAD_DE_MEDIDA {
     'mes', //Mes
 }
 
-export enum TIPO_DE_CONCEPTO {
+export enum ConceptType {
     'Sin clasificar' = 0,
     'Mano de obra' = 1,
     'Maquinaria y medios auxiliares' = 2,

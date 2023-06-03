@@ -1,19 +1,19 @@
 
-import { JUEGO_CARACTERES, TIPO_INFORMACION, VERSION_FORMATO, DIVISA, UNIDAD_DE_MEDIDA, TIPO_DE_CONCEPTO } from './enums';
+import { Charset, InformationType, FormatVersion, Currency, UnitOfMeassure, ConceptType } from './enums';
 
-export interface PropiedadYVersion {
-    PROPIEDAD_ARCHIVO?: String,
-    VERSION_FORMATO: VERSION_FORMATO,
-    DDMMAAAA: Date,
-    PROGRAMA_EMISION?: String,
+export interface PropertyAndVersion {
+    fileOwner?: String,
+    formatVersion?: FormatVersion,
+    fileDate?: Date,
+    softwareGenerator?: String,
     CABECERA?: String,
     ROTULO_IDENTIFICACION?: String | String[],
-    JUEGO_CARACTERES?: JUEGO_CARACTERES,
+    JUEGO_CARACTERES?: Charset,
     COMENTARIO?: String,
-    TIPO_INFORMACION?: TIPO_INFORMACION,
+    TIPO_INFORMACION?: InformationType,
     NUMERO_CERTIFICACION?: Number,
     FECHA_CERTIFICACION?: Date,
-    URL_BASE?: URL 
+    URL_BASE?: URL
 }
 
 export interface Coeficientes {
@@ -29,7 +29,7 @@ export interface Coeficientes {
     DS: Number,
     DSP?: Number,
     DEC: Number,
-    DIVISA: DIVISA
+    DIVISA: Currency
     CI: Number,
     GG: Number,
     BI: Number,
@@ -39,11 +39,11 @@ export interface Coeficientes {
 
 export interface Concepto {
     CODIGO: String | String[],
-    UNIDAD?: UNIDAD_DE_MEDIDA,
+    UNIDAD?: UnitOfMeassure,
     RESUMEN?: String,
     PRECIO: Number | Number[],
     FECHA: Date | Date[],
-    TIPO?: TIPO_DE_CONCEPTO
+    TIPO?: ConceptType
 }
 
 export interface DescomposicionHijo {
