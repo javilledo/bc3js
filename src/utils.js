@@ -14,7 +14,7 @@ function convertDate(s) {
         }
     }
     var year = Number(strAux);
-    return new Date(year, month, day, 0, 0, 0, 0);
+    return new Date(year, month, day);
 }
 exports.convertDate = convertDate;
 function getEnumKeyByEnumValue(myEnum, enumValue) {

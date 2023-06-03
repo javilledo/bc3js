@@ -16,8 +16,8 @@ function parsePropertyAndVersionfromBC3ToJSON(str: String): PropertyAndVersion {
     formatVersion: getEnumKeyByEnumValue(FormatVersion, strArray[2].split('\\')[0]),
     fileDate: convertDate(strArray[2].split('\\')[1]),
     softwareGenerator: strArray[3] || '',
-    // CABECERA?: String,
-    // ROTULO_IDENTIFICACION?: String | String[],
+    header: strArray[4].split('\\')[0],
+    identificationLabel: strArray[4].split('\\').slice(1),
     // JUEGO_CARACTERES?: JUEGO_CARACTERES,
     // COMENTARIO?: String,
     // TIPO_INFORMACION?: TIPO_INFORMACION,
@@ -28,7 +28,7 @@ function parsePropertyAndVersionfromBC3ToJSON(str: String): PropertyAndVersion {
 
 }
 
-let strTest: String = "~V||FIEBDC-3/2007\\210722|Menfis 8.2.122|\\|ANSI||2|"
+let strTest: String = "~V||FIEBDC-3/2007\\210722|Menfis 8.2.122|cabecera\\rotulo1\\rotulo2|ANSI||2|"
 
 console.log(parsePropertyAndVersionfromBC3ToJSON(strTest))
 
