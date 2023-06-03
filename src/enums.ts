@@ -12,7 +12,7 @@ export enum FormatVersion {
 }
 
 export enum Charset {
-    'ANSI'
+    ANSI = 'ANSI'
 } // No se contemplan 850 ni 437 (D.O.S)
 
 export enum InformationType {

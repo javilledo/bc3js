@@ -2,21 +2,21 @@
 import { Charset, InformationType, FormatVersion, Currency, UnitOfMeassure, ConceptType } from './enums';
 
 export interface PropertyAndVersion {
-    fileOwner?: String,
-    formatVersion?: FormatVersion,
-    fileDate?: Date,
-    softwareGenerator?: String,
-    header?: String,
-    identificationLabel?: String | String[],
-    JUEGO_CARACTERES?: Charset,
-    COMENTARIO?: String,
-    TIPO_INFORMACION?: InformationType,
-    NUMERO_CERTIFICACION?: Number,
-    FECHA_CERTIFICACION?: Date,
-    URL_BASE?: URL
+    fileOwner: String | null,
+    formatVersion: FormatVersion,
+    fileDate: Date | null,
+    softwareGenerator: String,
+    header: String | null,
+    identificationLabel: String | String[] | null,
+    charset: Charset,
+    comment: String | null,
+    informationType: InformationType,
+    certificationNumber: Number | null,
+    certificationDate: Date | null,
+    baseUrl: URL | null
 }
 
-export interface Coeficientes {
+export interface Coefficients {
     DRC?: Number,
     DC: Number,
     DFS?: Number,
@@ -29,7 +29,7 @@ export interface Coeficientes {
     DS: Number,
     DSP?: Number,
     DEC: Number,
-    DIVISA: Currency
+    currency: Currency
     CI: Number,
     GG: Number,
     BI: Number,

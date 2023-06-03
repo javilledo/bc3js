@@ -1,21 +1,32 @@
 
-export function convertDate(s: String): Date {
+export function convertDate(s: String): Date | null {
 
-    let day: number = Number(s.substring(0, 2));
+    if (s == '' || s == null || s == undefined || Number(s) == 0) {
 
-    let month: number = Number(s.substring(2, 4)) - 1
+        return null
 
-    let strAux: String = s.substring(4, 8)
-    if (strAux.length == 2) {
-        if (Number(strAux) > 90) {
-            strAux = '19' + strAux
-        } else {
-            strAux = '20' + strAux
+    } else {
+
+        let day: number = Number(s.substring(0, 2));
+
+        let month: number = Number(s.substring(2, 4)) - 1
+
+        let strAux: String = s.substring(4, 8)
+        if (strAux.length == 2) {
+            if (Number(strAux) > 90) {
+                strAux = '19' + strAux
+            } else {
+                strAux = '20' + strAux
+            }
         }
-    }
-    let year: number = Number(strAux);
 
-    return new Date(year, month, day)
+        let year: number = Number(strAux);
+
+        return new Date(year, month, day)
+
+    }
+
+
 
 }
 

@@ -15,7 +15,7 @@ var FormatVersion;
 })(FormatVersion = exports.FormatVersion || (exports.FormatVersion = {}));
 var Charset;
 (function (Charset) {
-    Charset[Charset["ANSI"] = 0] = "ANSI";
+    Charset["ANSI"] = "ANSI";
 })(Charset = exports.Charset || (exports.Charset = {})); // No se contemplan 850 ni 437 (D.O.S)
 var InformationType;
 (function (InformationType) {
