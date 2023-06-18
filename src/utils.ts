@@ -34,3 +34,8 @@ export function getEnumKeyByEnumValue(myEnum: any, enumValue: String): any {
     let keys = Object.keys(myEnum).filter(x => myEnum[x] == enumValue);
     return keys.length > 0 ? keys[0] : null;
 }
+
+//TODO: split a line of BC3 separated with | and \. Pay attention to the problem of backslashes (\) as an scape character in TS
+// export function splitTextLineOfBC3(str: String): String[]{
+
+// }

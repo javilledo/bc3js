@@ -11,15 +11,15 @@ export enum FormatVersion {
     v2020 = 'FIEBDC-3/2020'
 }
 
-export enum Charset {
+export enum CharacterSet {
     ANSI = 'ANSI'
 } // No se contemplan 850 ni 437 (D.O.S)
 
 export enum InformationType {
-    'Base de datos' = 1,
-    'Presupuesto' = 2,
-    'Certificación (a origen)' = 3,
-    'Actualización de base de datos' = 4
+    'Database' = 1, // Base de datos
+    'Budget' = 2, // Presupuesto
+    'Actual cost' = 3, // Certificación (a origen)
+    'Database update' = 4 // Actualización de base de datos
 }
 
 export enum Currency {
@@ -88,10 +88,22 @@ export enum UnitOfMeassure {
 }
 
 export enum ConceptType {
-    'Sin clasificar' = 0,
-    'Mano de obra' = 1,
-    'Maquinaria y medios auxiliares' = 2,
-    'Materiales' = 3,
-    'Componentes adicionales de residuo' = 4,
-    'Clasificación de residuo' = 5
+    'Unclassified' = 0, // Sin clasificar
+    'Labour' = 1, // Mano de obra
+    'Machinery and auxiliary equipment' = 2, // Maquinaria y medios auxiliares
+    'Materials' = 3, // Materiales
+    'Additional waste components' = 4, // Componentes adicionales de residuo
+    'Waste classification' = 5 // Clasificación de residuo
+}
+
+export enum DecompositionType {
+    'Placement-component waste' = 0,
+    'Demolition-component waste' = 1,
+    'Excavation-component wastes' = 2,
+    'Packaging-component wastes' = 3,
+}
+
+export enum Property {
+    'Output' = 'o',
+    'Waste factor' = 'wf'
 }
