@@ -1,6 +1,6 @@
 "use strict";
 exports.__esModule = true;
-exports.ConceptType = exports.UnitOfMeassure = exports.Currency = exports.InformationType = exports.Charset = exports.FormatVersion = void 0;
+exports.Property = exports.DecompositionType = exports.ConceptType = exports.UnitOfMeassure = exports.Currency = exports.InformationType = exports.CharacterSet = exports.FormatVersion = void 0;
 var FormatVersion;
 (function (FormatVersion) {
     FormatVersion["v101"] = "FIE-1.01";
@@ -13,16 +13,16 @@ var FormatVersion;
     FormatVersion["v2016"] = "FIEBDC-3/2016";
     FormatVersion["v2020"] = "FIEBDC-3/2020";
 })(FormatVersion = exports.FormatVersion || (exports.FormatVersion = {}));
-var Charset;
-(function (Charset) {
-    Charset["ANSI"] = "ANSI";
-})(Charset = exports.Charset || (exports.Charset = {})); // No se contemplan 850 ni 437 (D.O.S)
+var CharacterSet;
+(function (CharacterSet) {
+    CharacterSet["ANSI"] = "ANSI";
+})(CharacterSet = exports.CharacterSet || (exports.CharacterSet = {}));
 var InformationType;
 (function (InformationType) {
-    InformationType[InformationType["Base de datos"] = 1] = "Base de datos";
-    InformationType[InformationType["Presupuesto"] = 2] = "Presupuesto";
-    InformationType[InformationType["Certificaci\u00F3n (a origen)"] = 3] = "Certificaci\u00F3n (a origen)";
-    InformationType[InformationType["Actualizaci\u00F3n de base de datos"] = 4] = "Actualizaci\u00F3n de base de datos";
+    InformationType[InformationType["Database"] = 1] = "Database";
+    InformationType[InformationType["Budget"] = 2] = "Budget";
+    InformationType[InformationType["Actual cost"] = 3] = "Actual cost";
+    InformationType[InformationType["Database update"] = 4] = "Database update";
 })(InformationType = exports.InformationType || (exports.InformationType = {}));
 var Currency;
 (function (Currency) {
@@ -79,7 +79,7 @@ var UnitOfMeassure;
     UnitOfMeassure[UnitOfMeassure["l"] = 6] = "l";
     UnitOfMeassure[UnitOfMeassure["h"] = 7] = "h";
     UnitOfMeassure[UnitOfMeassure["d"] = 8] = "d";
-    UnitOfMeassure[UnitOfMeassure["a"] = 9] = "a";
+    UnitOfMeassure[UnitOfMeassure["to"] = 9] = "to";
     UnitOfMeassure[UnitOfMeassure["ha"] = 10] = "ha";
     UnitOfMeassure[UnitOfMeassure["cm3"] = 11] = "cm3";
     UnitOfMeassure[UnitOfMeassure["cm2"] = 12] = "cm2";
@@ -87,14 +87,26 @@ var UnitOfMeassure;
     UnitOfMeassure[UnitOfMeassure["u"] = 14] = "u";
     UnitOfMeassure[UnitOfMeassure["mu"] = 15] = "mu";
     UnitOfMeassure[UnitOfMeassure["cu"] = 16] = "cu";
-    UnitOfMeassure[UnitOfMeassure["mes"] = 17] = "mes";
+    UnitOfMeassure[UnitOfMeassure["month"] = 17] = "month";
 })(UnitOfMeassure = exports.UnitOfMeassure || (exports.UnitOfMeassure = {}));
 var ConceptType;
 (function (ConceptType) {
-    ConceptType[ConceptType["Sin clasificar"] = 0] = "Sin clasificar";
-    ConceptType[ConceptType["Mano de obra"] = 1] = "Mano de obra";
-    ConceptType[ConceptType["Maquinaria y medios auxiliares"] = 2] = "Maquinaria y medios auxiliares";
-    ConceptType[ConceptType["Materiales"] = 3] = "Materiales";
-    ConceptType[ConceptType["Componentes adicionales de residuo"] = 4] = "Componentes adicionales de residuo";
-    ConceptType[ConceptType["Clasificaci\u00F3n de residuo"] = 5] = "Clasificaci\u00F3n de residuo";
+    ConceptType[ConceptType["Unclassified"] = 0] = "Unclassified";
+    ConceptType[ConceptType["Labour"] = 1] = "Labour";
+    ConceptType[ConceptType["Machinery and auxiliary equipment"] = 2] = "Machinery and auxiliary equipment";
+    ConceptType[ConceptType["Materials"] = 3] = "Materials";
+    ConceptType[ConceptType["Additional waste components"] = 4] = "Additional waste components";
+    ConceptType[ConceptType["Waste classification"] = 5] = "Waste classification";
 })(ConceptType = exports.ConceptType || (exports.ConceptType = {}));
+var DecompositionType;
+(function (DecompositionType) {
+    DecompositionType[DecompositionType["Placement-component waste"] = 0] = "Placement-component waste";
+    DecompositionType[DecompositionType["Demolition-component waste"] = 1] = "Demolition-component waste";
+    DecompositionType[DecompositionType["Excavation-component wastes"] = 2] = "Excavation-component wastes";
+    DecompositionType[DecompositionType["Packaging-component wastes"] = 3] = "Packaging-component wastes";
+})(DecompositionType = exports.DecompositionType || (exports.DecompositionType = {}));
+var Property;
+(function (Property) {
+    Property["Output"] = "o";
+    Property["Waste factor"] = "wf";
+})(Property = exports.Property || (exports.Property = {}));

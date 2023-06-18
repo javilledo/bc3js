@@ -1,6 +1,6 @@
 "use strict";
 exports.__esModule = true;
-exports.getEnumKeyByEnumValue = exports.convertDate = void 0;
+exports.splitTextLineOfBC3 = exports.getEnumKeyByEnumValue = exports.convertDate = void 0;
 function convertDate(s) {
     if (s == '' || s == null || s == undefined || Number(s) == 0) {
         return null;
@@ -27,3 +27,8 @@ function getEnumKeyByEnumValue(myEnum, enumValue) {
     return keys.length > 0 ? keys[0] : null;
 }
 exports.getEnumKeyByEnumValue = getEnumKeyByEnumValue;
+//TODO: split a line of BC3 separated with | and \. Pay attention to the problem of backslashes (\) as an scape character in TS
+function splitTextLineOfBC3(str) {
+    return str.split('|').map(function (el) { return el.split('\\'); });
+}
+exports.splitTextLineOfBC3 = splitTextLineOfBC3;

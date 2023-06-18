@@ -35,7 +35,9 @@ export function getEnumKeyByEnumValue(myEnum: any, enumValue: String): any {
     return keys.length > 0 ? keys[0] : null;
 }
 
-//TODO: split a line of BC3 separated with | and \. Pay attention to the problem of backslashes (\) as an scape character in TS
-// export function splitTextLineOfBC3(str: String): String[]{
+//TODO: Prepare function splitTextLineOfBC3 considering simple backslash instead of double backslash
+export function splitTextLineOfBC3(str: string): string[][] {
 
-// }
+    return str.split('|').map((el) => el.split('\\'))
+
+}
