@@ -13,87 +13,87 @@ export enum FormatVersion {
 
 export enum CharacterSet {
     ANSI = 'ANSI'
-} // No se contemplan 850 ni 437 (D.O.S)
+}
 
 export enum InformationType {
-    'Database' = 1, // Base de datos
-    'Budget' = 2, // Presupuesto
-    'Actual cost' = 3, // Certificación (a origen)
-    'Database update' = 4 // Actualización de base de datos
+    'Database' = 1,
+    'Budget' = 2,
+    'Actual cost' = 3,
+    'Database update' = 4
 }
 
 export enum Currency {
-    'ATS', //Chelin Austriaco 
-    'BEF', //Franco Belga 
-    'DEM', // Marco Alemán 
-    'ESP', // Peseta Española 
-    'FIM', // Marco Finlandés 
-    'FRF', // Franco Francés 
-    'GRD', // Dracma Griega 
-    'IEP', // Libra Irlandesa 
-    'ITL', // Lira Italiana 
-    'LUF', // Franco Luxemburgués 
-    'NLG', // Florín Neerlandés 
-    'PTE', // Escudo Portugués 
-    'AUD', //Dólar Australiano 
-    'BGN', //Lev Búlgaro 
-    'CAD', //Dólar Canadiense 
-    'CHF', //Franco Suizo 
-    'CYP', //Libra Chipriota 
-    'CZK', //Corona Checa 
-    'DKK', //Corona Danesa 
-    'EEK', //Corona Estona 
-    'EUR', //Euro 
-    'GBP', //Libra Esterlina 
-    'HKD', //Dólar de Hong-Kong 
-    'HUF', //Forint Húngaro 
-    'ISK', //Corona Islandesa 
-    'JPY', //Yen Japonés 
-    'KRW', //Won Surcoreano 
-    'LTL', //Litas Lituano 
-    'LVL', //Lats Letón 
-    'MTL', //Lira Maltesa 
-    'NOK', //Corona Noruega 
-    'NZD', //Dólar Neozelandés 
-    'PLN', //Zloty Polaco 
-    'ROL', //Leu Rumano 
-    'SEK', //Corona Sueca 
-    'SGD', //Dólar de Singapur 
-    'SIT', //Tolar Esloveno 
-    'SKK', //Corona Eslovaca 
-    'TRL', //Lira Turca 
-    'USD', //Dólar Estadounidense 
-    'ZAR', //Rand Sudafricano 
+    'ATS', // Austrian Schilling 
+    'BEF', // Belgian Franc 
+    'DEM', // Deutsche Mark 
+    'ESP', // Spanish Peseta 
+    'FIM', // Finnish Markka 
+    'FRF', // French Franc 
+    'GRD', // Greek Drachma 
+    'IEP', // Irish Punt 
+    'ITL', // Italian Lira 
+    'LUF', // Luxembourg Franc 
+    'NLG', // Dutch Guilder 
+    'PTE', // Portuguese Escudo 
+    'AUD', // Australian Dollar 
+    'BGN', // Bulgarian Lev 
+    'CAD', // Canadian Dollar 
+    'CHF', // Swiss Franc 
+    'CYP', // Cypriot Pound 
+    'CZK', // Czech Krona 
+    'DKK', // Danish Krone 
+    'EEK', // Estonian Kroon 
+    'EUR', // Euro 
+    'GBP', // Pound Sterling 
+    'HKD', // Hong-Kong Dollar 
+    'HUF', // Hungarian Forint 
+    'ISK', // Icelandic Krona 
+    'JPY', // Japanese Yen 
+    'KRW', // South-Korean Won 
+    'LTL', // Lithuanian Litas 
+    'LVL', // Latvian Lats 
+    'MTL', // Maltese Lira 
+    'NOK', // Norwegian Krone 
+    'NZD', // New Zealand Dollar 
+    'PLN', // Polish Zloty 
+    'ROL', // Romanian Leu 
+    'SEK', // Swedish Krona 
+    'SGD', // Singapore Dollar 
+    'SIT', // Slovenian Tolar 
+    'SKK', // Slovakian Koruna 
+    'TRL', // Turkish Lira 
+    'USD', // US Dollar 
+    'ZAR', // South-African Rand 
 }
 
 export enum UnitOfMeassure {
-    'm',   //Metro
-    'm2',  //Metro cuadrado
-    'm3',  //Metro cúbico
-    'kg',  //Kilogramo
-    'km',  //Kilómetro
-    't',   //Tonelada
-    'l',   //Litro
-    'h',   //Hora
-    'd',   //Día
-    'a',   //Área
-    'ha',  //Hectárea
-    'cm3', //Centímetro cúbico
-    'cm2', //Centímetro cuadrado
-    'dm3', //Decímetro cúbico
-    'u',   //Unidad
-    'mu',  //Mil unidades
-    'cu',  //Cien unidades
-    'mes', //Mes
+    'm',     // Metre
+    'm2',    // Metre squared
+    'm3',    // Metre cubed
+    'kg',    // Kilogram
+    'km',    // Kilometre
+    't',     // Tonne
+    'l',     // Litre
+    'h',     // Hour
+    'd',     // Day
+    'to',    // Area
+    'ha',    // Hectare
+    'cm3',   // Centimetre cubed
+    'cm2',   // Centimetre squared
+    'dm3',   // Decimetre cubed
+    'u',     // Unit
+    'mu',    // Thousand units
+    'cu',    // Hundred units
+    'month', // Month
 }
 
 export enum ConceptType {
-    'Unclassified' = 0, // Sin clasificar
-    'Labour' = 1, // Mano de obra
-    'Machinery and auxiliary equipment' = 2, // Maquinaria y medios auxiliares
-    'Materials' = 3, // Materiales
-    'Additional waste components' = 4, // Componentes adicionales de residuo
-    'Waste classification' = 5 // Clasificación de residuo
+    'Unclassified' = 0,
+    'Labour' = 1,
+    'Machinery and auxiliary equipment' = 2,
+    'Materials' = 3,
+    'Additional waste components' = 4,
+    'Waste classification' = 5
 }
 
 export enum DecompositionType {
