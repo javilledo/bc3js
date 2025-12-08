@@ -1,42 +1,25 @@
 {
-  // see https://www.typescriptlang.org/tsconfig to better understand tsconfigs
-  "include": [
-    "src",
-    "types",
-    "index.ts"
-  ],
-  "compilerOptions": {
-    "module": "esnext",
-    "lib": [
-      "dom",
-      "esnext"
-    ],
-    "importHelpers": true,
-    // output .d.ts declaration files for consumers
-    "declaration": true,
-    // output .js.map sourcemap files for consumers
-    "sourceMap": true,
-    // match output dir to input dir. e.g. dist/index instead of dist/src/index
-    "rootDir": "./",
-    // stricter type-checking for stronger correctness. Recommended by TS
-    "strict": true,
-    // linter checks for common issues
-    "noImplicitReturns": true,
-    "noFallthroughCasesInSwitch": true,
-    // noUnused* overlap with @typescript-eslint/no-unused-vars, can disable if duplicative
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    // use Node's module resolution algorithm, instead of the legacy TS one
-    "moduleResolution": "node",
-    // transpile JSX to React.createElement
-    "jsx": "react",
-    // interop between ESM and CJS modules. Recommended by TS
-    "esModuleInterop": true,
-    // significant perf increase by skipping checking .d.ts files, particularly those in node_modules. Recommended by TS
-    "skipLibCheck": true,
-    // error out if import and file system have a casing mismatch. Recommended by TS
-    "forceConsistentCasingInFileNames": true,
-    // `tsdx build` ignores this option, but it is commonly used when type-checking separately with `tsc`
-    "noEmit": true,
-  }
+    "compilerOptions": {
+        /* --- Configuración Básica --- */
+        "target": "ES2020", /* Convierte tu código moderno a una versión que Node.js entienda bien */
+        "module": "commonjs", /* El estándar clásico de Node.js */
+        "lib": [
+            "ES2020"
+        ], /* Incluye definiciones de nuevas características de JS */
+        "strict": true, /* Activa el modo estricto (¡Indispensable para código de calidad!) */
+        /* --- Configuración para Librerías (NPM) --- */
+        "declaration": true, /* ¡CRUCIAL! Genera los archivos .d.ts para que tus usuarios tengan autocompletado */
+        "outDir": "./dist", /* Todo lo compilado irá a la carpeta 'dist' */
+        "rootDir": "./src", /* Busca el código fuente aquí */
+        "esModuleInterop": true, /* Permite compatibilidad entre diferentes tipos de módulos */
+        "forceConsistentCasingInFileNames": true,
+        "skipLibCheck": true /* Ahorra tiempo al compilar */
+    },
+    "include": [
+        "src/**/*"
+    ], /* Solo compila lo que esté en src */
+    "exclude": [
+        "node_modules",
+        "tests"
+    ] /* Ignora los tests al generar la librería final */
 }
