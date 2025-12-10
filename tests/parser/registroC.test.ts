@@ -1,5 +1,6 @@
-import { parseRegistroC } from '../../src/parser/lineParser';
-import { TipoConcepto } from '../../src/types'; // Importante importar el Enum
+
+import { parseRegistroC } from '../../src/parser/parseC';
+import { TipoConcepto } from '../../src/interfaces/types';
 
 describe('parseRegistroC (~C)', () => {
 

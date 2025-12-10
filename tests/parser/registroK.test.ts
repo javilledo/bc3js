@@ -1,4 +1,5 @@
-import { parseRegistroK } from '../../src/parser/lineParser';
+
+import { parseRegistroK } from '../../src/parser/parseK';
 
 describe('parseRegistroK', () => {
     it('debe parsear correctamente los porcentajes y decimales con huecos', () => {

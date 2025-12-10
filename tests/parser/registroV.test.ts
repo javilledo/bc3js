@@ -1,5 +1,6 @@
-import { parseRegistroV } from '../../src/parser/lineParser'; // Ajusta la ruta según tu estructura
-import { RegistroCabeceraV } from '../../src/types'; // Ajusta la ruta
+
+import { parseRegistroV } from '../../src/parser/parseV';
+import { RegistroCabeceraV } from '../../src/interfaces/interfaceV';
 
 describe('parseRegistroV', () => {
 
