@@ -1,6 +1,5 @@
 // --- TIPOS AUXILIARES ---
 export type Codificacion = 'ANSI' | 'CP850' | 'UTF-8' | string;
-export type TipoConcepto = '0' | '1' | '2' | '3' | string;
 export type FiebdcVersion =
     | 'FIEBDC-3/2024'  // Versión actual
     | 'FIEBDC-3/2020'  // Versión con soporte extendido
@@ -8,6 +7,14 @@ export type FiebdcVersion =
     | 'FIEBDC-3/2012'
     | 'FIEBDC-3/2004'
     | 'FIEBDC-3/2002'; // Versiones legacy
+export enum TipoConcepto {
+    SinClasificar = 0,
+    ManoDeObra = 1,
+    Maquinaria = 2, // Maquinaria y medios auxiliares
+    Materiales = 3,
+    ResiduoComponentes = 4, // Componentes adicionales de residuo
+    ResiduoClasificacion = 5 // Clasificación de residuo
+}
 
 // --- REGISTRO DE CABECERA (~V) ---
 export interface RegistroCabeceraV {
@@ -99,4 +106,43 @@ export interface RegistroCoeficientesK {
      * Campo 4: Opción BdcGloParNumero.
      */
     opcionDivisa?: number;
+}
+
+// --- REGISTRO DE CONCEPTO (~C) ---
+export interface RegistroConceptoC {
+    tipo: 'C';
+
+    /**
+     * Campo 1: Código(s) del concepto.
+     * Es un array porque admite sinónimos separados por '\'.
+     * El primero es el principal.
+     * Nota: Puede incluir caracteres especiales '#' (Capítulo) o '##' (Raíz).
+     */
+    codigos: string[];
+
+    /** Campo 2: Unidad de medida (m3, kg, h, etc.) */
+    unidad?: string;
+
+    /** Campo 3: Resumen o descripción corta */
+    resumen?: string;
+
+    /**
+     * Campo 4: Precios.
+     * Array que corresponde secuencialmente a los Rótulos de Identificación del registro ~V.
+     * Si hay menos precios que rótulos, el último precio se repite para el resto (lógica de negocio).
+     */
+    precios: number[];
+
+    /**
+     * Campo 5: Fechas de actualización de los precios.
+     * Formato normalizado: YYYY-MM-DD (si se puede parsear) o string original.
+     * Corresponde secuencialmente a los precios.
+     */
+    fechas: string[];
+
+    /**
+     * Campo 6: Tipo de concepto.
+     * Generalmente: 0 (Simple), 1 (Calculado), 2 (Capítulo), 3 (Raíz), etc.
+     */
+    tipoConcepto?: TipoConcepto;
 }
