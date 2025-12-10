@@ -1,4 +1,8 @@
 src/
 tests/
 tsconfig.json
-.eslintrc.js
+jest.config.js
+.eslintrc.json
+.prettierrc
+_OLD/
+*.test.ts

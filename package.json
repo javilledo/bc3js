@@ -8,15 +8,25 @@
     ],
     "scripts": {
         "build": "tsc",
-        "test": "jest"
+        "test": "jest",
+        "test:watch": "jest --watch",
+        "test:coverage": "jest --coverage",
+        "lint": "eslint src/**/*.ts",
+        "format": "prettier --write \"src/**/*.ts\"",
+        "prepublishOnly": "npm run build && npm test"
     },
     "directories": {
         "test": "tests"
     },
-    "keywords": [],
-    "author": "",
+    "keywords": [
+        "bc3",
+        "fiebdc",
+        "construction",
+        "parser"
+    ],
+    "author": "Francisco Javier Lledó Fuster (javilledo@gmail.com)",
     "license": "ISC",
-    "description": "",
+    "description": "Parser y serializador de archivos BC3 (FIEBDC-3)",
     "devDependencies": {
         "@types/jest": "^30.0.0",
         "@typescript-eslint/eslint-plugin": "^8.48.1",
@@ -28,5 +38,12 @@
         "prettier": "^3.7.4",
         "ts-jest": "^29.4.6",
         "typescript": "^5.9.3"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/javilledo/bc3js.git"
+    },
+    "bugs": {
+        "url": "https://github.com/javilledo/bc3js/issues"
     }
 }
